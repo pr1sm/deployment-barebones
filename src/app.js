@@ -84,6 +84,8 @@ function serve(deployDir, deployName) {
     }
   });
 
+  app.use(express.static('dist'));
+
   const listener = app.listen(PORT, () => {
     console.log(`Deployment Server started on port ${listener.address().port}`);
   });
